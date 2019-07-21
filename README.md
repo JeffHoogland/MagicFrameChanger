@@ -3,7 +3,7 @@ A simple tool in Python+Qt for quickly changing image files around for my OBS ov
 
 Requires:
 
-* [Python 2.7](https://www.python.org/downloads/) and 
+* [Python 2.7](https://www.python.org/downloads/)
 * [PySide](http://qt-project.org/wiki/PySideDownloads)
 
 Simple usage:
@@ -12,7 +12,7 @@ Edit the frame image files located in Frames sub directory to contain your infor
 
 Update the file path and current frame name as desired in the settings panel.
 
-Point OBS / streeaming software to the current frame PNG to be displayed on your overlay.
+Point OBS / streaming software to the current frame PNG to be displayed on your overlay.
 
 Enjoy!
 
