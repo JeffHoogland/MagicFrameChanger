@@ -7,20 +7,20 @@ import shutil
 import os
  
 class MainWindow(QMainWindow, Ui_MainWindow):
-    def __init__(self):
-        super(MainWindow, self).__init__()
-        self.colors = { "Red" 	: False,
+	def __init__(self):
+		super(MainWindow, self).__init__()
+		self.colors = { "Red" 	: False,
 						"Blue" 	: False,
 						"Black"	: False,
 						"Green"	: False,
 						"White" : False,
 						"Pink"	: False}
 						
-        self.setupUi(self)
-        self.assignWidgets()
-        self.show()
+		self.setupUi(self)
+		self.assignWidgets()
+		self.show()
 
-    def assignWidgets(self):
+	def assignWidgets(self):
 		self.redCheck.stateChanged.connect(lambda:self.checkClicked(self.redCheck))
 		self.blueCheck.stateChanged.connect(lambda:self.checkClicked(self.blueCheck))
 		self.greenCheck.stateChanged.connect(lambda:self.checkClicked(self.greenCheck))
@@ -29,10 +29,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.pinkCheck.stateChanged.connect(lambda:self.checkClicked(self.pinkCheck))
 		self.updateButton.clicked.connect(self.updatePushed)
         
-    def checkClicked(self, checkBox):
+	def checkClicked(self, checkBox):
 		self.colors[checkBox.text()] = bool(checkBox.checkState())
 	
-    def updatePushed(self):
+	def updatePushed(self):
 		FrameToCopy = "Frame"
 		colorCount = 0
 		for color in ["Red", "Blue", "Black", "Green", "White"]:
@@ -60,7 +60,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 			shutil.copyfile(fileToCopy, newImage)
 
 if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    mainWin = MainWindow()
-    ret = app.exec_()
-    sys.exit( ret )
+	app = QApplication(sys.argv)
+	mainWin = MainWindow()
+	ret = app.exec_()
+	sys.exit( ret )
