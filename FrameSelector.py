@@ -21,13 +21,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.show()
 
     def assignWidgets(self):
-        self.redCheck.stateChanged.connect(lambda:self.checkClicked(self.redCheck))
-        self.blueCheck.stateChanged.connect(lambda:self.checkClicked(self.blueCheck))
-        self.greenCheck.stateChanged.connect(lambda:self.checkClicked(self.greenCheck))
-        self.whiteCheck.stateChanged.connect(lambda:self.checkClicked(self.whiteCheck))
-        self.blackCheck.stateChanged.connect(lambda:self.checkClicked(self.blackCheck))
-        self.pinkCheck.stateChanged.connect(lambda:self.checkClicked(self.pinkCheck))
-        self.updateButton.clicked.connect(self.updatePushed)
+		self.redCheck.stateChanged.connect(lambda:self.checkClicked(self.redCheck))
+		self.blueCheck.stateChanged.connect(lambda:self.checkClicked(self.blueCheck))
+		self.greenCheck.stateChanged.connect(lambda:self.checkClicked(self.greenCheck))
+		self.whiteCheck.stateChanged.connect(lambda:self.checkClicked(self.whiteCheck))
+		self.blackCheck.stateChanged.connect(lambda:self.checkClicked(self.blackCheck))
+		self.pinkCheck.stateChanged.connect(lambda:self.checkClicked(self.pinkCheck))
+		self.updateButton.clicked.connect(self.updatePushed)
         
     def checkClicked(self, checkBox):
 		self.colors[checkBox.text()] = bool(checkBox.checkState())
