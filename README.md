@@ -14,7 +14,7 @@ Update the file path and current frame name as desired in the settings panel.
 
 Point OBS / streaming software to the current frame PNG to be displayed on your overlay.
 
-Enjoy!
+Run FrameSelector.py with python and enjoy!
 
 ![alt text](https://github.com/JeffHoogland/MagicFrameChanger/blob/master/screenshot.jpg?raw=true "Default UI") 
 
