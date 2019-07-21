@@ -1,0 +1,93 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'selector.ui'
+#
+# Created: Sat Jul 13 16:18:03 2019
+#      by: pyside-uic 0.2.15 running on PySide 1.2.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PySide import QtCore, QtGui
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(334, 252)
+        self.centralwidget = QtGui.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.horizontalLayout = QtGui.QHBoxLayout(self.centralwidget)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.tabWidget = QtGui.QTabWidget(self.centralwidget)
+        self.tabWidget.setObjectName("tabWidget")
+        self.colorTab = QtGui.QWidget()
+        self.colorTab.setObjectName("colorTab")
+        self.verticalLayout = QtGui.QVBoxLayout(self.colorTab)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.redCheck = QtGui.QCheckBox(self.colorTab)
+        self.redCheck.setObjectName("redCheck")
+        self.verticalLayout.addWidget(self.redCheck)
+        self.blueCheck = QtGui.QCheckBox(self.colorTab)
+        self.blueCheck.setObjectName("blueCheck")
+        self.verticalLayout.addWidget(self.blueCheck)
+        self.blackCheck = QtGui.QCheckBox(self.colorTab)
+        self.blackCheck.setObjectName("blackCheck")
+        self.verticalLayout.addWidget(self.blackCheck)
+        self.greenCheck = QtGui.QCheckBox(self.colorTab)
+        self.greenCheck.setObjectName("greenCheck")
+        self.verticalLayout.addWidget(self.greenCheck)
+        self.whiteCheck = QtGui.QCheckBox(self.colorTab)
+        self.whiteCheck.setObjectName("whiteCheck")
+        self.verticalLayout.addWidget(self.whiteCheck)
+        self.pinkCheck = QtGui.QCheckBox(self.colorTab)
+        self.pinkCheck.setObjectName("pinkCheck")
+        self.verticalLayout.addWidget(self.pinkCheck)
+        self.updateButton = QtGui.QPushButton(self.colorTab)
+        self.updateButton.setText("Refresh")
+        self.updateButton.setObjectName("updateButton")
+        self.verticalLayout.addWidget(self.updateButton)
+        self.tabWidget.addTab(self.colorTab, "")
+        self.settingsTab = QtGui.QWidget()
+        self.settingsTab.setObjectName("settingsTab")
+        self.verticalLayout_2 = QtGui.QVBoxLayout(self.settingsTab)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.groupBox = QtGui.QGroupBox(self.settingsTab)
+        self.groupBox.setObjectName("groupBox")
+        self.verticalLayout_3 = QtGui.QVBoxLayout(self.groupBox)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.pathToFrames = QtGui.QLineEdit(self.groupBox)
+        self.pathToFrames.setEnabled(True)
+        self.pathToFrames.setPlaceholderText("")
+        self.pathToFrames.setObjectName("pathToFrames")
+        self.verticalLayout_3.addWidget(self.pathToFrames)
+        self.verticalLayout_2.addWidget(self.groupBox)
+        self.groupBox_2 = QtGui.QGroupBox(self.settingsTab)
+        self.groupBox_2.setObjectName("groupBox_2")
+        self.verticalLayout_4 = QtGui.QVBoxLayout(self.groupBox_2)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.frameName = QtGui.QLineEdit(self.groupBox_2)
+        self.frameName.setObjectName("frameName")
+        self.verticalLayout_4.addWidget(self.frameName)
+        self.verticalLayout_2.addWidget(self.groupBox_2)
+        self.tabWidget.addTab(self.settingsTab, "")
+        self.horizontalLayout.addWidget(self.tabWidget)
+        MainWindow.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(MainWindow)
+        self.tabWidget.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Magic Frame Selector", None, QtGui.QApplication.UnicodeUTF8))
+        self.redCheck.setText(QtGui.QApplication.translate("MainWindow", "Red", None, QtGui.QApplication.UnicodeUTF8))
+        self.blueCheck.setText(QtGui.QApplication.translate("MainWindow", "Blue", None, QtGui.QApplication.UnicodeUTF8))
+        self.blackCheck.setText(QtGui.QApplication.translate("MainWindow", "Black", None, QtGui.QApplication.UnicodeUTF8))
+        self.greenCheck.setText(QtGui.QApplication.translate("MainWindow", "Green", None, QtGui.QApplication.UnicodeUTF8))
+        self.whiteCheck.setText(QtGui.QApplication.translate("MainWindow", "White", None, QtGui.QApplication.UnicodeUTF8))
+        self.pinkCheck.setText(QtGui.QApplication.translate("MainWindow", "Pink", None, QtGui.QApplication.UnicodeUTF8))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.colorTab), QtGui.QApplication.translate("MainWindow", "Color Selector", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox.setTitle(QtGui.QApplication.translate("MainWindow", "Filepath to Frame Images", None, QtGui.QApplication.UnicodeUTF8))
+        self.pathToFrames.setText(QtGui.QApplication.translate("MainWindow", "/home/jeff/Dropbox/Jeff/StreamStuff/FrameSelector/Frames", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox_2.setTitle(QtGui.QApplication.translate("MainWindow", "Current Frame Name", None, QtGui.QApplication.UnicodeUTF8))
+        self.frameName.setText(QtGui.QApplication.translate("MainWindow", "CurrentFrame.png", None, QtGui.QApplication.UnicodeUTF8))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.settingsTab), QtGui.QApplication.translate("MainWindow", "Settings", None, QtGui.QApplication.UnicodeUTF8))
+
